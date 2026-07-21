@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://csps5g1kc26pv"]
+
+[ext_resource type="PackedScene" uid="uid://cp0gxyeytkuxq" path="res://player/player.tscn" id="1_qfg4s"]
+[ext_resource type="Script" uid="uid://cmnit57epkawk" path="res://tower/level.gd" id="1_ueha3"]
+[ext_resource type="PackedScene" uid="uid://41yxeqdxyqru" path="res://bad_guy/bad_guy.tscn" id="2_1yt5i"]
+[ext_resource type="PackedScene" uid="uid://d1i7lybljgg37" path="res://tower/tower.tscn" id="2_ueha3"]
+
+[node name="Level" type="Node" unique_id=24849680]
+script = ExtResource("1_ueha3")
+bad_guy_scene = ExtResource("2_1yt5i")
+
+[node name="Player" parent="." unique_id=484585539 instance=ExtResource("1_qfg4s")]
+position = Vector2(123, 246)
+
+[node name="Tower" parent="." unique_id=559367143 instance=ExtResource("2_ueha3")]
+position = Vector2(125, 324)
+
+[node name="Spawn1" type="Marker2D" parent="." unique_id=1143262230]
+position = Vector2(1200, 162)
+
+[node name="Spawn2" type="Marker2D" parent="." unique_id=733611694]
+position = Vector2(1200, 324)
+
+[node name="Spawn3" type="Marker2D" parent="." unique_id=1237739540]
+position = Vector2(1200, 488)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1330243989]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
