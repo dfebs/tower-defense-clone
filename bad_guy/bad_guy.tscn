@@ -32,3 +32,8 @@ animation = &"walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=610150907]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_x67hh")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=966093771]
+rect = Rect2(-14, -22, 28, 52)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exit"]

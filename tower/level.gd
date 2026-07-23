@@ -2,6 +2,8 @@ extends Node
 
 @export var bad_guy_scene: PackedScene
 
+signal lose_game
+
 func _ready() -> void:
 	pass
 
@@ -14,5 +16,8 @@ func _on_spawn_timer_timeout() -> void:
 	bad_guy.position = spawn.position
 	bad_guy.z_index = -1
 	add_child(bad_guy)
-	pass
+	bad_guy.exited.connect(_lose_game)
+
+func _lose_game():
+	lose_game.emit()
 

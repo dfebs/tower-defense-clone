@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bb6ia1u70sseu"]
+
+[ext_resource type="Script" uid="uid://bd7olf2hhqc7t" path="res://ui/main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Node" unique_id=337778807]
+script = ExtResource("1_06t4h")
+
+[node name="Button" type="Button" parent="." unique_id=1831044277]
+offset_left = 456.0
+offset_top = 320.0
+offset_right = 704.0
+offset_bottom = 391.0
+text = "Start Game"
+
+[node name="Label" type="Label" parent="." unique_id=1611750860]
+offset_left = 245.0
+offset_top = 217.0
+offset_right = 934.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 44
+text = "Cool Tower Defense Video Game"

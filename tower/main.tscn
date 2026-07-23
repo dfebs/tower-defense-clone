@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://dqudvgcqkwb2i"]
 
 [ext_resource type="PackedScene" uid="uid://csps5g1kc26pv" path="res://tower/level.tscn" id="1_6mdfm"]
+[ext_resource type="Script" uid="uid://buh84spuxhvss" path="res://main.gd" id="1_i8tgn"]
+[ext_resource type="PackedScene" uid="uid://cua4em4kih1gj" path="res://ui/notify.tscn" id="3_566cm"]
+[ext_resource type="PackedScene" uid="uid://bb6ia1u70sseu" path="res://ui/main_menu.tscn" id="3_u2wcl"]
 
 [node name="Main" type="Node" unique_id=605378835]
+script = ExtResource("1_i8tgn")
+level_class = ExtResource("1_6mdfm")
+notify_class = ExtResource("3_566cm")
 
-[node name="Level" parent="." unique_id=24849680 instance=ExtResource("1_6mdfm")]
+[node name="MainMenu" parent="." unique_id=337778807 instance=ExtResource("3_u2wcl")]
+
+[connection signal="start_game" from="MainMenu" to="." method="_on_main_menu_start_game"]
