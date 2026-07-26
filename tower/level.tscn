@@ -4,10 +4,15 @@
 [ext_resource type="Script" uid="uid://cmnit57epkawk" path="res://tower/level.gd" id="1_ueha3"]
 [ext_resource type="PackedScene" uid="uid://41yxeqdxyqru" path="res://bad_guy/bad_guy.tscn" id="2_1yt5i"]
 [ext_resource type="PackedScene" uid="uid://d1i7lybljgg37" path="res://tower/tower.tscn" id="2_ueha3"]
+[ext_resource type="PackedScene" uid="uid://bm8hujhtlppmv" path="res://environment/background.tscn" id="3_o5scq"]
 
 [node name="Level" type="Node" unique_id=24849680]
 script = ExtResource("1_ueha3")
 bad_guy_scene = ExtResource("2_1yt5i")
+
+[node name="Background" parent="." unique_id=571682310 instance=ExtResource("3_o5scq")]
+z_index = -2
+position = Vector2(576, 324)
 
 [node name="Player" parent="." unique_id=484585539 instance=ExtResource("1_qfg4s")]
 position = Vector2(123, 246)
