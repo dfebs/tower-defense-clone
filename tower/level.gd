@@ -11,8 +11,9 @@ func _ready() -> void:
 	$LevelTimer.timeout.connect(_on_level_timer_timeout)
 	pass
 
-func begin_level(spawn_delay) -> void:
+func begin_level(level_num, spawn_delay) -> void:
 	$SpawnTimer.wait_time = spawn_delay
+	$LevelNumber.text = "Level " + str(level_num) + " of 3"
 	$SpawnTimer.start()
 	$LevelTimer.start()
 
