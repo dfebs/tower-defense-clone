@@ -10,7 +10,6 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_button_pressed() -> void:
-	print("button pressed")
 	start_game.emit()
 
 func disable() -> void:

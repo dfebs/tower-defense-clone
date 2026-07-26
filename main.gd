@@ -26,7 +26,6 @@ func _on_main_menu_start_game() -> void:
 
 	spawn_delay = spawn_delay - (level_num - 1) * 0.4
 	level.begin_level(level_num, spawn_delay)
-	print ("starting level with spawn delay " + str(spawn_delay))
 
 func _end_game(message: String):
 	$Level.queue_free()

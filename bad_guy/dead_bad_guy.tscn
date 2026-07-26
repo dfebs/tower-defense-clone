@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c74jk22fvovcj"]
+
+[ext_resource type="Texture2D" uid="uid://ckohqijg55dgd" path="res://bad_guy/bad_guy_dead.png" id="1_y8t7j"]
+
+[node name="DeadBadGuy" type="Node2D" unique_id=1611405828]
+
+[node name="Body" type="Sprite2D" parent="." unique_id=2137247958]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_y8t7j")

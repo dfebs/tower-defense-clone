@@ -1,6 +1,7 @@
 extends Node
 
 @export var bad_guy_scene: PackedScene
+@export var dead_bad_guy_scene: PackedScene
 const ENEMY_GROUP = "enemies"
 
 signal lose_game
@@ -33,10 +34,16 @@ func _on_spawn_timer_timeout() -> void:
 
 	add_child(bad_guy)
 	bad_guy.exited.connect(_lose_game)
+	bad_guy.died.connect(_on_bad_guy_died)
 
 func _on_level_timer_timeout() -> void:
 	$SpawnTimer.stop()
 	pass
+
+func _on_bad_guy_died(pos):
+	var dead_bad_guy = dead_bad_guy_scene.instantiate()
+	dead_bad_guy.global_position = pos
+	add_child(dead_bad_guy)
 
 func _lose_game() -> void:
 	lose_game.emit()
