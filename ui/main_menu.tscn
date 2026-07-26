@@ -19,3 +19,4 @@ offset_right = 934.0
 offset_bottom = 278.0
 theme_override_font_sizes/font_size = 44
 text = "Cool Tower Defense Video Game"
+horizontal_alignment = 1

@@ -31,9 +31,7 @@ position = Vector2(1200, 488)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1330243989]
 wait_time = 2.0
-autostart = true
 
 [node name="LevelTimer" type="Timer" parent="." unique_id=316687473]
 wait_time = 20.0
 one_shot = true
-autostart = true

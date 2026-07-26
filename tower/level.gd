@@ -11,6 +11,11 @@ func _ready() -> void:
 	$LevelTimer.timeout.connect(_on_level_timer_timeout)
 	pass
 
+func begin_level(spawn_delay) -> void:
+	$SpawnTimer.wait_time = spawn_delay
+	$SpawnTimer.start()
+	$LevelTimer.start()
+
 func _process(_delta: float) -> void:
 	if $SpawnTimer.is_stopped():
 		var bad_guys = get_tree().get_nodes_in_group(ENEMY_GROUP).size()
