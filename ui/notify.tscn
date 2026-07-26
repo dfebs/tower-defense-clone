@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://cua4em4kih1gj"]
 
-[node name="Notify" type="Node" unique_id=1192135321]
-
-[node name="Label" type="Label" parent="." unique_id=126855322]
-offset_left = 242.0
-offset_top = 280.0
-offset_right = 931.0
-offset_bottom = 341.0
-theme_override_font_sizes/font_size = 44
-text = "You lost the video game!"
+[node name="Notify" type="Label" unique_id=1811154401]
+offset_left = 375.0
+offset_top = 272.0
+offset_right = 795.0
+offset_bottom = 362.0
+theme_override_font_sizes/font_size = 49
+text = "This is a message!"
 horizontal_alignment = 1
