@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://chbt64awuggjo" path="res://player/player.png" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://ulu5qkeqpwar" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="PackedScene" uid="uid://c43ynch17tilk" path="res://projectiles/arrow.tscn" id="2_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://buo16yqqje6ie" path="res://player/player_weapon.tscn" id="4_yw30f"]
 
 [node name="Player" type="Node2D" unique_id=1460746630]
 script = ExtResource("1_rkbax")
@@ -11,3 +12,5 @@ projectile_class = ExtResource("2_g1dw6")
 [node name="Body" type="Sprite2D" parent="." unique_id=2059890371]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_oul6g")
+
+[node name="PlayerWeapon" parent="." unique_id=6373727 instance=ExtResource("4_yw30f")]
